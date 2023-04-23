@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const productRouter = require("./routes/product");
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json());
+app.use("/api/producst", productRouter);
 
 
 app.listen(process.env.PORT || 4000, () => {
