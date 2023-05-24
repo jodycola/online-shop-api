@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json());
-app.use("/api/producst", productRouter);
+app.use("/api/products", productRouter);
 
 
 app.listen(process.env.PORT || 4000, () => {
